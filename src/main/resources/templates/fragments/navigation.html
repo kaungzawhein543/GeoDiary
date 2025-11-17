@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+    <nav th:fragment="nav" >
+        <ul style="display: flex; gap: 20px; align-items: center;">
+            <li><a th:href="@{/geoDiary/places}">Places</a></li>
+            <li><a th:href="@{/geoDiary/places/categories}">Category</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

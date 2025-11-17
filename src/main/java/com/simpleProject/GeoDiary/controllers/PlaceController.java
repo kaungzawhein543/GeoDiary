@@ -23,12 +23,18 @@ public class PlaceController {
     @GetMapping
     public String getAllPlaces(Model model) {
         model.addAttribute("places", placeService.getAllPlaces());
-        return "places/list";
+        return "places";
+    }
+
+    @GetMapping("/create")
+    public String showCreateForm(Model model) {
+        model.addAttribute("place", new Place());
+        return "create";
     }
 
     @PostMapping
     public String createPlace(@ModelAttribute Place place) {
         placeService.addPlace(place);
-        return "redirect:/places/list";
+        return "redirect:/places";
     }
 }

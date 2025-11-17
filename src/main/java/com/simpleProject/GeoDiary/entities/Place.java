@@ -2,6 +2,7 @@ package com.simpleProject.GeoDiary.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -22,6 +23,7 @@ public class Place {
     private String address;
     private double latitude;
     private double longitude;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date_visited;
     private String description;
     private boolean delete_flg;
